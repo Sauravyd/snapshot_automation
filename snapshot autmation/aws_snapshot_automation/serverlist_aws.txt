@@ -1,0 +1,9 @@
+# TARGET_ID       ; REGION      ; RetentionDays ; Scope ; Reason
+# TARGET_ID can be: EC2 instance-id (i-xxxx) OR EBS volume-id (vol-xxxx)
+# Scope for instance: ROOT / DATA / BOTH
+# Scope for volume: VOLUME (or ignore, it’s just for info)
+
+i-060d6a0e5de1c3417 ; ap-south-1 ; 7  ; ROOT ; daily backup before patch
+i-0563239302dc9cdce ; ap-south-1 ; 14 ; BOTH ; monthly full snapshot
+vol-0e3a5f346e41a306b ; ap-south-1 ; 7 ; VOLUME ; backup standalone data volume
+

@@ -1,0 +1,15 @@
+Starting snapshot creation: Mon Nov 17 06:35:02 UTC 2025
+Date: 17-11-2025  Time(tag): 12:05  Time(name-safe): 12-05
+-------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  RetentionDays: 14  Reason: "daily snapshot before patch"
+Attempting INCREMENTAL snapshot for OS disk: vm1-test-17-11-2025-12-05-automated-backup
+Incremental OS snapshot failed (no existing SKU) rc=1. Falling back to full snapshot.
+Created FULL OS snapshot (fallback): vm1-test-17-11-2025-12-05-automated-backup
+Attempting INCREMENTAL snapshot for data disk 1: vm1-test-17-11-2025-12-05-automated-backup-data-1
+Created incremental data snapshot: vm1-test-17-11-2025-12-05-automated-backup-data-1
+-------------------------------------
+VM: vm2-test  RG: RG-SNAPSHOT-TEST  Type: full  RetentionDays: 30  Reason: "pre-maintenance"
+Creating FULL OS snapshot: vm2-test-17-11-2025-12-05-automated-backup
+Created FULL OS snapshot: vm2-test-17-11-2025-12-05-automated-backup
+No data disks for vm2-test
+Snapshot creation completed at Mon Nov 17 06:35:56 UTC 2025

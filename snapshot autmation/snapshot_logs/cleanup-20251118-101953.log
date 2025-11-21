@@ -1,0 +1,5 @@
+Starting cleanup: Tue Nov 18 04:49:53 UTC 2025
+Mode: dry-run
+Fetching all subscription snapshots...
+DELETE: vm1-data-disk-1-18-11-2025-10-13-automated-backup (age 0 >= 0)
+Cleanup complete.

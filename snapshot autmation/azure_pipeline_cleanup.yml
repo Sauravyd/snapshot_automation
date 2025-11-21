@@ -1,0 +1,83 @@
+# azure_pipeline_cleanup.yml
+# Separate pipeline JUST for snapshot cleanup.
+
+trigger: none        # no CI trigger – run manually from DevOps UI
+
+# Optional: you can add a schedule later if you want
+# schedules:
+# - cron: "0 18 * * *"           # every day at 18:00 UTC (adjust as needed)
+#   displayName: "Daily snapshot cleanup"
+#   always: true
+#   branches:
+#     include:
+#     - main
+
+# ---------- Runtime parameters ----------
+parameters:
+- name: mode
+  displayName: "Cleanup mode"
+  type: string
+  default: "dry-run"
+  values:
+  - "dry-run"
+  - "run"
+
+- name: targetRG
+  displayName: "Optional Resource Group filter (blank = all RGs)"
+  type: string
+  default: ""
+
+# ---------- Variables ----------
+variables:
+  cleanupScriptFile: "snapshot_cleanup_scheduled.sh"
+
+# ---------- Single cleanup stage ----------
+stages:
+- stage: CleanupSnapshots
+  displayName: "Snapshot cleanup"
+  jobs:
+  - job: cleanup_snapshots
+    displayName: "Execute snapshot cleanup"
+    pool:
+      name: linux-self-host      # <-- same agent pool as your other pipeline
+
+    steps:
+    - checkout: self
+
+    # Use AzureCLI so az is already logged in via service connection
+    - task: AzureCLI@2
+      displayName: "Run snapshot_cleanup_scheduled.sh"
+      inputs:
+        # !!! IMPORTANT: replace this with your real service connection name
+        azureSubscription: 'My-Azure-Conn'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          chmod +x $(cleanupScriptFile)
+
+          echo "Selected mode: ${{ parameters.mode }}"
+          echo "Target RG   : '${{ parameters.targetRG }}'"
+
+          CMD="./$(cleanupScriptFile)"
+
+          # Add --run only when user chose 'run'
+          if [ "${{ parameters.mode }}" = "run" ]; then
+            CMD="$CMD --run"
+          fi
+
+          # Add --rg only when user gave an RG
+          if [ -n "${{ parameters.targetRG }}" ]; then
+            CMD="$CMD --rg '${{ parameters.targetRG }}'"
+          fi
+
+          echo "Executing: $CMD"
+          eval "$CMD"
+
+        workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+    - task: DeleteFiles@1
+      displayName: 'Delete files in Build.SourcesDirectory'
+      inputs:
+        SourceFolder: '$(Build.SourcesDirectory)'
+        Contents: '**/*'
+        RemoveSourceFolder: false

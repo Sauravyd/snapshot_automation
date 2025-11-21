@@ -1,0 +1,4 @@
+Starting snapshot creation: Mon Nov 17 08:39:26 UTC 2025
+------------------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  Retention: 7 days  Scope: OS
+Creating OS snapshot: vm1-test-17-11-2025-14-09-automated-backup

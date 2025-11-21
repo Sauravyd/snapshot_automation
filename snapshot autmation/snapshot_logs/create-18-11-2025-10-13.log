@@ -1,0 +1,24 @@
+Starting snapshot creation: Tue Nov 18 04:43:36 UTC 2025
+------------------------------------------------------------
+Entry -> Target: vm1-test   RG: RG-SNAPSHOT-TEST   Type: inc   Retention: 7   Scope: OS   Reason: daily backup before patch
+Existing incremental SKU for target vm1-test: Standard_LRS
+Creating OS snapshot: vm1-test-18-11-2025-10-13-automated-backup
+Incremental failed for vm1-test-18-11-2025-10-13-automated-backup; creating FULL instead.
+------------------------------------------------------------
+Entry -> Target: vm2-test   RG: RG-SNAPSHOT-TEST   Type: full   Retention: 14   Scope: BOTH   Reason: monthly full snapshot
+Existing incremental SKU for target vm2-test: Standard_LRS
+Creating OS snapshot: vm2-test-18-11-2025-10-13-automated-backup
+------------------------------------------------------------
+Entry -> Target: vm1-data-disk-1   RG: RG-SNAPSHOT-TEST   Type: full   Retention: 7   Scope: OS   Reason: backup of standalone disk
+Interpreting target as disk: vm1-data-disk-1 (id: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-data-disk-1)
+Creating DISK snapshot: vm1-data-disk-1-18-11-2025-10-13-automated-backup
+------------------------------------------------------------
+Entry -> Target: vm1-test   RG: RG-SNAPSHOT-TEST   Type: inc   Retention: 7   Scope: OS   Reason: test incremental synonym
+Existing incremental SKU for target vm1-test: Standard_LRS
+Creating OS snapshot: vm1-test-18-11-2025-10-13-automated-backup
+Incremental failed for vm1-test-18-11-2025-10-13-automated-backup; creating FULL instead.
+------------------------------------------------------------
+Entry -> Target: vm1-test   RG: RG-SNAPSHOT-TEST   Type: full   Retention: 7   Scope: OS   Reason: test full synonym
+Existing incremental SKU for target vm1-test: Standard_LRS
+Creating OS snapshot: vm1-test-18-11-2025-10-13-automated-backup
+Snapshot creation completed.

@@ -1,0 +1,31 @@
+# ============================================================================================
+# SERVER LIST INPUT FILE FOR SNAPSHOT AUTOMATION
+#
+# FIELD ORDER (semicolon-separated):
+#
+#   1. VMName                → Name of the Virtual Machine in Azure
+#   2. ResourceGroup         → Resource group where the VM exists
+#   3. SnapshotType          → Allowed: Incremental | Full
+#   4. RetentionDays         → Number of days to keep this snapshot (numeric only)
+#   5. SnapshotScope         → Allowed: OS | Data | Both
+#   6. Reason                → Short description of why snapshot is taken
+#
+# IMPORTANT NOTES:
+#   - DO NOT add extra spaces before/after semicolons.
+#   - Each line represents ONE VM entry.
+#   - RetentionDays MUST be a number (e.g., 7, 14, 30).
+#   - SnapshotScope:
+#          OS   = Only OS disk
+#          Data = Only Data disks
+#          Both = OS + all Data disks
+#   - SnapshotType:
+#          Incremental = Takes incremental snapshot (Azure rules apply)
+#          Full        = Takes full snapshot (always works)
+#   - A trailing semicolon at the end of the line is optional.
+# ============================================================================================
+
+# VMName        ; ResourceGroup       ; SnapshotType ; RetentionDays ; SnapshotScope ; Reason
+
+vm1-test; RG-SNAPSHOT-TEST; Incremental; 7; OS ; daily_snapshot_before_patch
+vm2-test        ; RG-SNAPSHOT-TEST    ; Full         ; 7             ; OS            ; pre-maintenance
+

@@ -1,0 +1,10 @@
+Starting snapshot creation: Mon Nov 17 08:46:13 UTC 2025
+------------------------------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  Retention: 7 days  Scope: OS
+Existing incremental SKU for vm1-test: Standard_LRS
+Creating OS snapshot: vm1-test-17-11-2025-14-16-automated-backup
+Incremental failed (SKU mismatch or other). Falling back to FULL.
+------------------------------------------------------------
+VM: vm2-test  RG: RG-SNAPSHOT-TEST  Type: full  Retention: 7 days  Scope: OS
+Creating OS snapshot: vm2-test-17-11-2025-14-16-automated-backup
+Snapshot creation completed.

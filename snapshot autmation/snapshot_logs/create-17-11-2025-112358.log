@@ -1,0 +1,14 @@
+Starting on-demand snapshot creation: Mon Nov 17 05:53:58 UTC 2025
+Date: 17-11-2025  Time: 112358
+----------------------------------------
+Processing VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  RetentionDays: 14
+Creating OS snapshot: vm1-test-17-11-2025-112358-automated-backup
+Created OS snapshot: vm1-test-17-11-2025-112358-automated-backup
+Creating data snapshot: vm1-test-17-11-2025-112358-automated-backup-data-1
+Created data snapshot: vm1-test-17-11-2025-112358-automated-backup-data-1
+----------------------------------------
+Processing VM: vm2-test  RG: RG-SNAPSHOT-TEST  Type: full  RetentionDays: 30
+Creating OS snapshot: vm2-test-17-11-2025-112358-automated-backup
+Created OS snapshot: vm2-test-17-11-2025-112358-automated-backup
+No data disks for vm2-test
+Snapshot creation finished: Mon Nov 17 05:54:28 UTC 2025

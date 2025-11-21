@@ -1,0 +1,9 @@
+Starting snapshot creation: Mon Nov 17 09:08:54 UTC 2025
+------------------------------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: full  Retention: 14 days  Scope: OS
+Existing incremental SKU for vm1-test: Standard_LRS
+Creating OS snapshot: vm1-test-17-11-2025-14-38-automated-backup
+------------------------------------------------------------
+VM: vm2-test  RG: RG-SNAPSHOT-TEST  Type: inc  Retention: 30 days  Scope: OS
+Creating OS snapshot: vm2-test-17-11-2025-14-38-automated-backup
+Snapshot creation completed.

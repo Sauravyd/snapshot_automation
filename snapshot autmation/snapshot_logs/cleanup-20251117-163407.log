@@ -1,0 +1,5 @@
+Starting cleanup: Mon Nov 17 11:04:07 UTC 2025
+Mode: run
+Fetching all subscription snapshots...
+DELETE: vm1-test-17-11-2025-11-47-automated-backup (age 0 >= 0)
+Cleanup complete.

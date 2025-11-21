@@ -1,0 +1,5 @@
+Starting snapshot creation: Mon Nov 17 06:31:50 UTC 2025
+Date: 17-11-2025  Time(tag): 12:01  Time(name-safe): 12-01
+-------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  RetentionDays: 14  Reason: "daily snapshot before patch"
+Creating OS snapshot: vm1-test-17-11-2025-12-01-automated-backup  (Time tag: 12:01)

@@ -1,0 +1,22 @@
+Starting snapshot script: Wed Nov 19 04:02:40 UTC 2025
+Mode: --run
+------------------------------------------------------------
+Entry -> Target: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  Retention: 7  Scope: OS  Reason: daily backup before patch
+Creating OS snapshot: vm1-test-19-11-2025-09-32-40-automated-backup from disk: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-test_OsDisk_1_b50b093e9d8142c6a80fd41a5988c657
+Incremental failed for vm1-test-19-11-2025-09-32-40-automated-backup; creating FULL instead.
+------------------------------------------------------------
+Entry -> Target: vm2-test  RG: RG-SNAPSHOT-TEST  Type: full  Retention: 14  Scope: BOTH  Reason: monthly full snapshot
+Creating OS snapshot: vm2-test-19-11-2025-09-32-40-automated-backup from disk: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/rg-snapshot-test/providers/Microsoft.Compute/disks/vm2-test_OsDisk_1_153cef014fca4ad48eb1d9534280a5da
+------------------------------------------------------------
+Entry -> Target: vm1-data-disk-1  RG: RG-SNAPSHOT-TEST  Type: full  Retention: 7  Scope: OS  Reason: backup of standalone disk
+Interpreting target as DISK: vm1-data-disk-1 (id: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-data-disk-1)
+Creating DISK snapshot: vm1-data-disk-1-19-11-2025-09-32-40-automated-backup from disk: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-data-disk-1
+------------------------------------------------------------
+Entry -> Target: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  Retention: 7  Scope: OS  Reason: test incremental synonym
+Creating OS snapshot: vm1-test-19-11-2025-09-32-40-automated-backup from disk: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-test_OsDisk_1_b50b093e9d8142c6a80fd41a5988c657
+Incremental failed for vm1-test-19-11-2025-09-32-40-automated-backup; creating FULL instead.
+------------------------------------------------------------
+Entry -> Target: vm1-test  RG: RG-SNAPSHOT-TEST  Type: full  Retention: 7  Scope: OS  Reason: test full synonym
+Creating OS snapshot: vm1-test-19-11-2025-09-32-40-automated-backup from disk: /subscriptions/780e0927-130d-4369-a21e-31111220c970/resourceGroups/RG-SNAPSHOT-TEST/providers/Microsoft.Compute/disks/vm1-test_OsDisk_1_b50b093e9d8142c6a80fd41a5988c657
+
+✔ DONE — Mode: --run

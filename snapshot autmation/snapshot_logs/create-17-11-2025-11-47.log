@@ -1,0 +1,14 @@
+Starting snapshot creation: Mon Nov 17 06:17:25 UTC 2025
+Date: 17-11-2025  Time(tag): 11:47  Time(name-safe): 11-47
+-------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  RetentionDays: 14
+Creating OS snapshot: vm1-test-17-11-2025-11-47-automated-backup  (Time tag: 11:47)
+Created OS snapshot: vm1-test-17-11-2025-11-47-automated-backup
+Creating data snapshot: vm1-test-17-11-2025-11-47-automated-backup-data-1  (Time tag: 11:47)
+Created data snapshot: vm1-test-17-11-2025-11-47-automated-backup-data-1
+-------------------------------------
+VM: vm2-test  RG: RG-SNAPSHOT-TEST  Type: full  RetentionDays: 30
+Creating OS snapshot: vm2-test-17-11-2025-11-47-automated-backup  (Time tag: 11:47)
+Created OS snapshot: vm2-test-17-11-2025-11-47-automated-backup
+No data disks for vm2-test
+Snapshot creation completed at Mon Nov 17 06:18:05 UTC 2025

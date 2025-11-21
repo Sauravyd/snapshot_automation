@@ -1,0 +1,4 @@
+Starting AWS snapshot script: Thu Nov 20 05:51:37 UTC 2025
+Mode: --dry-run
+------------------------------------------------------------
+Target: i-060d6a0e5de1c3417   Region: ap-south-1   Scope: ROOT   Retention: 7   Reason: daily backup before patch

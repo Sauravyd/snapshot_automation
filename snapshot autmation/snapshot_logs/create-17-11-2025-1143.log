@@ -1,0 +1,5 @@
+Starting snapshot creation: Mon Nov 17 06:13:33 UTC 2025
+Snapshot name time format: 11:43
+-------------------------------------
+VM: vm1-test  RG: RG-SNAPSHOT-TEST  Type: inc  RetentionDays: 14
+Creating OS snapshot: vm1-test-17-11-2025-11:43-automated-backup

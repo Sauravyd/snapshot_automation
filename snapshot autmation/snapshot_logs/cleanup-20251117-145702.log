@@ -1,0 +1,6 @@
+Starting snapshot cleanup: Mon Nov 17 09:27:02 UTC 2025
+Mode: run
+Restricting to resource groups: RG-SNAPSHOT-TEST
+Fetching snapshots for RG: RG-SNAPSHOT-TEST
+Cleanup finished: Mon Nov 17 09:27:02 UTC 2025
+Logfile: ./snapshot_logs/cleanup-20251117-145702.log

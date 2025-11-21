@@ -1,0 +1,17 @@
+Q1) list down objects inside folder in s3
+
+Q2) list numbers from 1-10 using for loop in python
+
+response = client.list_objects(
+    Bucket='string',
+    Delimiter='string',
+    EncodingType='url',
+    Marker='string',
+    MaxKeys=123,
+    Prefix='string',
+    RequestPayer='requester',
+    ExpectedBucketOwner='string',
+    OptionalObjectAttributes=[
+        'RestoreStatus',
+    ]
+)

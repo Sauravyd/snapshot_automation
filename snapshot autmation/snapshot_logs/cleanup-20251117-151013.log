@@ -1,0 +1,5 @@
+Starting cleanup: Mon Nov 17 09:40:13 UTC 2025
+Mode: dry-run
+Fetching all subscription snapshots...
+DELETE: snap-delete-test (age 0 >= 0)
+Cleanup complete.

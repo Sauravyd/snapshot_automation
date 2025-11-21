@@ -1,0 +1,36 @@
+# ==================================================================================
+# SERVERLIST V2 FORMAT
+# ==================================================================================
+# Field1  : Target (VM name OR Disk name)
+# Field2  : Resource Group Name
+# Field3  : Snapshot Type (Incremental / Full / incr / inc / f / full)
+# Field4  : Retention Days (numeric only)
+# Field5  : Snapshot Scope (OS / Data / Both)
+# Field6  : Reason for backup (free text)
+# ==================================================================================
+# Notes:
+# - Spaces around semicolons DO NOT matter.
+# - You may enter either a VM name or a Disk name in Field1.
+# - SnapshotType supports synonyms: inc, incr, incremental, full, f
+# - Scope must be exactly one of: OS, Data, Both
+# - RetentionDays is read exactly as you provide here.
+# - Every line creates 1 or more snapshots for that target.
+# ==================================================================================
+
+# -------------------------------
+# EXAMPLES
+# -------------------------------
+
+# Case 1: Normal VM (no spaces)
+vm1-test;RG-SNAPSHOT-TEST;Incremental;7;OS;daily backup before patch
+
+# Case 2: VM with extra spacing (works perfectly)
+vm2-test    ;    RG-SNAPSHOT-TEST   ; Full ; 14 ; Both ; monthly full snapshot
+
+# Case 3: Disk name instead of VM (script treats as direct disk snapshot)
+vm1-data-disk-1 ; RG-SNAPSHOT-TEST ; Full ; 7 ; OS ; backup of standalone disk
+
+# Case 4: Type synonyms (all treated correctly)
+vm1-test;RG-SNAPSHOT-TEST;incr;7;OS;test incremental synonym
+vm1-test;RG-SNAPSHOT-TEST;f;7;OS;test full synonym
+
