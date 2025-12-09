@@ -1,91 +1,46 @@
+# list = ['a', 12, 'b', 34, 'c', 56]
 
-# num1 = str(input("Enter your name: "))
-# print("Hello Welcome to Bootlabs,", num1)
+# print(list)
 
-# print("GitHub Copilot\nAI programming assistant\n5 years\nHello, Saurav! Welcome to Python.")
+# list[1]= 'saurav'
+# print (list)
 
-# if __name__ == "__main__":
-#     print("GitHub Copilot\nAI programming assistant\n5 years\nHello, Saurav! Welcome to Python.")
-
-
-# num = int(input("Enter a number: "))
-
-# # if num % 2 == 0:
-# #     print(num, "is an Even number")
-# # else:
-# #     print(num, "is an Odd number")
+# list.append('new item')
+# print(list)
 
 
-# # for i in range(1, 6):
-# #     print("Hello", i)
+# # print(list.remove(12))
 
-# for i in range(1, 11):
-#     print(num, "x", i, "=", num * i)
+# list.remove(34)
+# print(list)
 
-# project_tools = {"python": "3.17.1", "java": "3.1", "javascript": "ES6"}
-# print(project_tools["javascript"])
+# num= int(input("Enter a number: "))
+# a= 0
+# b= 1
+# c= a + b
 
-import code
-from itertools import count
-import numbers
-from tabnanny import check
-
-from numpy import number
-
-
-# def factorial(a):
-#     if a == 0:
-#         return 1
-#     else:
-#         return a * factorial(a-1)
-# print(factorial(6))
+# for i in range(num):
+#     print(c, end=" ")
+#     a = b
+#     b = c
+#     c = a + b
 
 
-# Create your own module with a function get_area() that calculates rectangle area.
+# i want a code for fibonacci series using for loop and enter number of terms from user
 
-# def get_area(length, width):
-#     return length * width   
+# num= int(input("Enter a number: "))
+# a= 0
+# b= 1
+# c= a + b
 
-# print(get_area(5, 10))
+# for i in range(num):
+#     print(c, end=" ")
+#     a = b
+#     b = c
+#     c = a + b       
 
-# import json
-# data = '{"name": "Saurav", "role": "DevOps"}'
-# print(json.loads(data))
-# parsed_data = json.loads(data)
-# print(parsed_data["name"])
-# print(parsed_data["role"]) 
+# Q2) list numbers from 1-10 using for loop in python
 
-# num1 = int(input("Enter first number: "))
-# num2 = int(input("Enter second number: "))
-# num3 = int(input("Enter third number: "))
+for i in range(1, 11):
+    print(i)
 
-# if (num1 >= num2) and (num1 >= num3):
-#     print(num1, "is the largest number")
-# elif (num2 >= num1) and (num2 >= num3):
-#     print(num2, "is the largest number")
-# else:
-#     print(num3, "is the largest number")    
-
-
-
-
-
-num = int(input("Enter a Number: "))
-
-if num == 0 or num == 1:
-    print(num," Not a prime  Number")
-else:
-    print(num, "a prime  Number")
-    
-    
-prime number check code
-is_prime = True
-for i in range(2, int(num / 2) + 1):
-    if num % i == 0:
-        is_prime = False
-        break       
-
-if is_prime:
-    print(num, "is a prime number")
-else:
-    print(num, "is not a prime number")
